@@ -3,13 +3,15 @@ var express = require('express'),
 var server = require('http').createServer(app);
 //var io = require('socket.io')(server);
 var port = process.env.PORT || 8080;
+var debug = require('debug')('index.js');
 
-server.listen(port,function(){
-   console.log('I\'m listening to port: %d', port);
+server.listen(port, function () {
+    console.log('I\'m listening to port: %d', port);
+    debug("Server is listetning at port %d", port);
 });
 
-app.get("/student/:id", function(req,res){
+app.get("/student/:id", function (req, res) {
     res.end(req.params.id + " rocks!");
 });
 
-app.use(express.static(__dirname+ '/www/'));
+app.use(express.static(__dirname + '/www/'));
