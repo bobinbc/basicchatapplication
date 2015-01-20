@@ -1,1 +1,24 @@
-This Works?!
+<!DOCTYPE>
+<html>
+
+<body>
+    <div id="chats"></div>
+    <form id="chatmessage">
+        <input placeholder="Enter your chat here:" id="message" name="message" />
+        <input type="submit" value="Send" />
+    </form>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            var sUrl = "http://localhost:8080";
+            var socket = io(sUrl);
+
+            jQuery("#chatmessage").submit(function () {
+                socket.emit("message", jQuery("#message").val());
+            });
+        });
+    </script>
+</body>
+
+</html>
