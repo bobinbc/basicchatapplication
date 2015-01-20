@@ -4,6 +4,6 @@
         "express":"*",
         "engine.io":"*",
         "socket.io":"*",
-        "debug":"*",
+        "debug":"*"
     }
 }
