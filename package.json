@@ -1,6 +1,9 @@
 {
     "name":"chatapp",
     "dependencies":{
-        "express":"*"
+        "express":"*",
+        "engine.io":"*",
+        "socket.io":"*",
+        "debug":"*",
     }
 }
