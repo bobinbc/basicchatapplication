@@ -2,7 +2,7 @@ var express = require('express'),
     app = express();
 var server = require('http').createServer(app);
 //var io = require('socket.io')(server);
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 var debug = require('debug')('index.js');
 var io = require('socket.io')(server);
 
